@@ -23,16 +23,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this._buscar.onaBuscarChanged.subscribe(data => {
-      console.log('cambio');
-      console.log(data[0]);
       this.data = data[0];
     });
 
   }
 
   definir(stat: string, iv: number): void {
-    console.log( stat );
-    console.log( iv );
     switch (stat) {
       case 'sword':
           this.ataque = iv;
@@ -65,8 +61,6 @@ export class HomeComponent implements OnInit {
     aux.p3 = this.data.Rank;
 
     this.tabla.push(aux);
-
-    console.log(this.tabla);
   }
 
 }
