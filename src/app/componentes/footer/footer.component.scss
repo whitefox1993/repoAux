@@ -1,0 +1,11 @@
+footer {
+    .container, span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            margin: 5px 0;
+        }
+    }
+}

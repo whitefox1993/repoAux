@@ -1,0 +1,87 @@
+<div class="jumbotron jumbotron-fluid animated fadeIn fast">
+       
+        <h1 class="">Ingrese los IV de Turtwig</h1>
+
+        <div class="container">
+
+            <!-- Ataque -->
+            <div class="row mt-2 Ataque">
+                <div class="col-12">
+                    <img src="assets/img/sword.svg" width="30" height="30"
+                         class="d-inline-block align-top mr-sm-0" alt="Ataque">
+                    <div class="btn-group flex-container" role="group" arial-label="group-sword">
+                        <button type="button" class="btn btn-secondary" *ngFor="let iv of ivs" (click)="definir('sword',iv)"
+                            id="sword-{{iv}}">{{ iv }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Defensa -->
+            <div class="row mt-2 Defensa">
+                <div class="col-12">
+                    <img src="assets/img/shield.png" width="30" height="30"
+                         class="d-inline-block align-top mr-sm-0" alt="Defensa">
+                    <div class="btn-group flex-container" role="group" arial-label="group-shield">
+                        <button type="button" class="btn btn-secondary" *ngFor="let iv of ivs"
+                            (click)="definir('shield',iv)" id="shield-{{iv}}">{{ iv }}
+                        </button>
+                    </div>
+                </div>            
+            </div>
+
+            <!-- Salud -->
+            <div class="row mt-2 Salud">
+                <div class="col-12">
+                    <img src="assets/img/heart.png" width="30" height="30"
+                         class="d-inline-block align-top mr-sm-0" alt="Salud">
+                    <div class="btn-group flex-container" role="group" arial-label="group-heart">
+                        <button type="button" class="btn btn-secondary" *ngFor="let iv of ivs"
+                            (click)="definir('heart',iv)" id="heart-{{iv}}">{{ iv }}
+                        </button>        
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+
+        <div class="row mt-3 center-center">
+            <button type="button" class="btn btn-success" (click)="buscar()">
+                Buscar {{ ataque }} - {{ defensa }} - {{ salud }}
+            </button>
+        </div>
+
+
+</div>
+
+<!-- container -->
+<div class="">
+    <table class="table animated fadeIn fast">
+        <thead class="thead-dark">
+            <tr>
+                <th class="iv">IVs</th>
+                
+                <th scope="col" class="mejor">
+                    <p>Turtwig</p>
+                    <span>(15-15-15)</span>
+                </th>
+                <th scope="col" class="mejor">
+                    <p>Grotle</p>
+                    <span>(0-15-11)</span>
+                </th>
+                <th scope="col" class="mejor">
+                    <p>Torterra</p>
+                    <span>(0-11-13)</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>            
+            <tr *ngFor="let t of tabla; let i = index">
+                <td>{{ t.ivs }}</td>
+                <td>Rank {{ t.p1 }}</td>
+                <td>Rank {{ t.p2 }}</td>
+                <td>Rank {{ t.p3 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

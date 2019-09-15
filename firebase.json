@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/ranking-turtwig",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
