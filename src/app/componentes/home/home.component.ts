@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
 
     aux.p3 = this.data.Rank;
 
-    this.tabla.push(aux);
+    this.tabla.unshift(aux);
   }
 
 }
